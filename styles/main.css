@@ -1,71 +1,9 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.container {
+  width: 100px;
+  height: 200px;
+  background-color: rgb(47, 1, 1);
 }
 
-.header {
-  width: 100%;
-}
-.header .header-info .row {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  background-color: rgb(170, 175, 175);
-  padding: 30px 30px;
-  width: 100%;
-}
-.header .header-info .row .logo img {
-  height: 40px;
-}
-.header .header-info .row ul {
-  display: flex;
-  gap: 80px;
-}
-.header .header-info .row ul li {
-  list-style: none;
-}
-.header .header-info .row ul li a {
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: 0.1s;
-}
-.header .header-info .row ul li a span {
-  text-transform: uppercase;
-  display: inline-block;
-  transition: transform 1s;
-  color: black;
-}
-.header .header-info .row ul li a:hover span {
-  color: rgb(41, 40, 40);
-  transform: scale(1.2);
-}
-.header .header-info .row .connect {
-  position: relative;
-  transition: 1s;
-}
-.header .header-info .row .connect i:first-child {
-  cursor: pointer;
-}
-.header .header-info .row .connect i:first-child:hover + .social {
-  display: flex;
-  flex-direction: column;
-}
-.header .header-info .row .connect span {
-  color: black;
-  font-size: 20px;
-}
-.header .header-info .row .connect .social {
-  display: none;
-  position: absolute;
-  background-color: white;
-  border: 1px solid black;
-  padding: 10px;
-  z-index: 1;
-}
-.header .header-info .row .connect .social a {
-  display: block;
-  text-decoration: none;
-  margin-bottom: 5px;
-  color: black;
+:root {
+  --red: rgb(47, 1, 1);
 }/*# sourceMappingURL=main.css.map */
