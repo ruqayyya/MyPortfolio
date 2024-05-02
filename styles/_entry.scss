@@ -3,66 +3,108 @@
   padding: 0;
   box-sizing: border-box;
 }
-// body{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
+
 .container {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: rgb(47, 1, 1);
+  background-color: var(--red);
+  overflow: hidden;
+
   .title {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     h1 {
-        cursor: pointer;
-        font-size: 50px;
-        padding: 50px 0;
+      cursor: pointer;
+      font-size: 50px;
+      padding: 50px 0;
       color: white;
-
-    }
-  }
-  .down {
-    width: 800px;
-    border-left: 200px solid transparent;
-    border-right: 200px solid transparent;
-    border-bottom: 250px solid black;
-    position: relative;
-    animation: downAnimation 3s forwards;
-
-    @keyframes downAnimation {
-      0% {
-        bottom: -100%;
+      transition: background-position 0.5s, color 0.5s;
+      @media screen and (max-width: 800px) {
+        font-size: 45px;
+        padding: 50px 0;
       }
-      100% {
-        bottom : 0%;
+      @media screen and (max-width: 460px) {
+        font-size: 40px;
+        padding: 40px 0;
+      }
+      @media screen and (max-width: 340px) {
+        font-size: 35px;
+        padding: 30px 0;
+      }
+      &:hover {
+        color: rgb(79, 78, 78);
       }
     }
   }
-  .up {
-    width: 800px;
-    border-left: 200px solid transparent;
-    border-right: 200px solid transparent;
-    border-top: 250px solid black;
-    position: relative;
-    animation: upAnimation 3s forwards;
+}
+.down {
+  width: 800px;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-bottom: 250px solid var(--black);
+  position: relative;
+  animation: downAnimation 3s forwards;
+  @media screen and (max-width: 800px) {
+    width: 500px;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+  }
+  @media screen and (max-width: 460px) {
+    width: 400px;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+  }
+  @media screen and (max-width: 340px) {
+    width: 400px;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+  }
 
-    @keyframes upAnimation {
-      0% {
-        top: -100%;
-      }
-      100% {
-        top: 0%;
-      }
+  @keyframes downAnimation {
+    0% {
+      bottom: -100%;
     }
-    
+    100% {
+      bottom: 0%;
+    }
+  }
+}
+.up {
+  width: 800px;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-top: 250px solid var(--black);
+  position: relative;
+  animation: upAnimation 3s forwards;
+  @media screen and (max-width: 800px) {
+    width: 500px;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+  }
+  @media screen and (max-width: 460px) {
+    width: 400px;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+  }
+  @media screen and (max-width: 340px) {
+    width: 400px;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+  }
+
+  @keyframes upAnimation {
+    0% {
+      top: -100%;
+    }
+    100% {
+      top: 0%;
+    }
   }
 }

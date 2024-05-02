@@ -11,28 +11,73 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: rgb(47, 1, 1);
+  background-color: var(--red);
+  overflow: hidden;
 }
 .container .title {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .container .title h1 {
   cursor: pointer;
   font-size: 50px;
   padding: 50px 0;
   color: white;
+  transition: background-position 0.5s, color 0.5s;
 }
-.container .down {
+@media screen and (max-width: 800px) {
+  .container .title h1 {
+    font-size: 45px;
+    padding: 50px 0;
+  }
+}
+@media screen and (max-width: 460px) {
+  .container .title h1 {
+    font-size: 40px;
+    padding: 40px 0;
+  }
+}
+@media screen and (max-width: 340px) {
+  .container .title h1 {
+    font-size: 35px;
+    padding: 30px 0;
+  }
+}
+.container .title h1:hover {
+  color: rgb(79, 78, 78);
+}
+
+.down {
   width: 800px;
   border-left: 200px solid transparent;
   border-right: 200px solid transparent;
-  border-bottom: 250px solid black;
+  border-bottom: 250px solid var(--black);
   position: relative;
   animation: downAnimation 3s forwards;
+}
+@media screen and (max-width: 800px) {
+  .down {
+    width: 500px;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+  }
+}
+@media screen and (max-width: 460px) {
+  .down {
+    width: 400px;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+  }
+}
+@media screen and (max-width: 340px) {
+  .down {
+    width: 400px;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+  }
 }
 @keyframes downAnimation {
   0% {
@@ -42,13 +87,35 @@
     bottom: 0%;
   }
 }
-.container .up {
+
+.up {
   width: 800px;
   border-left: 200px solid transparent;
   border-right: 200px solid transparent;
-  border-top: 250px solid black;
+  border-top: 250px solid var(--black);
   position: relative;
   animation: upAnimation 3s forwards;
+}
+@media screen and (max-width: 800px) {
+  .up {
+    width: 500px;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+  }
+}
+@media screen and (max-width: 460px) {
+  .up {
+    width: 400px;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+  }
+}
+@media screen and (max-width: 340px) {
+  .up {
+    width: 400px;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+  }
 }
 @keyframes upAnimation {
   0% {
@@ -61,4 +128,5 @@
 
 :root {
   --red: rgb(47, 1, 1);
+  --black: black;
 }/*# sourceMappingURL=main.css.map */
