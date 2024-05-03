@@ -4,211 +4,130 @@
   box-sizing: border-box;
 }
 
-.entry .container {
+.entry {
+  background-image: url(../assets/images/tamalsen-home-cover.jpg);
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
-  background-color: var(--red);
-  overflow: hidden;
-}
-.entry .container .title {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: capitalize;
-}
-.entry .container .title h1 {
-  cursor: pointer;
-  font-size: 50px;
-  padding: 50px 0;
-  color: white;
-  transition: background-position 0.5s, color 0.5s;
-}
-@media screen and (max-width: 800px) {
-  .entry .container .title h1 {
-    font-size: 45px;
-    padding: 50px 0;
-  }
-}
-@media screen and (max-width: 460px) {
-  .entry .container .title h1 {
-    font-size: 40px;
-    padding: 40px 0;
-  }
-}
-@media screen and (max-width: 340px) {
-  .entry .container .title h1 {
-    font-size: 35px;
-    padding: 30px 0;
-  }
-}
-.entry .container .title h1:hover {
-  color: rgb(79, 78, 78);
-}
-.entry .down {
-  width: 800px;
-  border-left: 200px solid transparent;
-  border-right: 200px solid transparent;
-  border-bottom: 250px solid var(--black);
-  position: relative;
-  animation: downAnimation 3s forwards;
-}
-@media screen and (max-width: 800px) {
-  .entry .down {
-    width: 500px;
-    border-left: 80px solid transparent;
-    border-right: 80px solid transparent;
-  }
-}
-@media screen and (max-width: 460px) {
-  .entry .down {
-    width: 400px;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-  }
-}
-@media screen and (max-width: 340px) {
-  .entry .down {
-    width: 400px;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-  }
-}
-@keyframes downAnimation {
-  0% {
-    bottom: -100%;
-  }
-  100% {
-    bottom: 0%;
-  }
-}
-.entry .up {
-  width: 800px;
-  border-left: 200px solid transparent;
-  border-right: 200px solid transparent;
-  border-top: 250px solid var(--black);
-  position: relative;
-  animation: upAnimation 3s forwards;
-}
-@media screen and (max-width: 800px) {
-  .entry .up {
-    width: 500px;
-    border-left: 80px solid transparent;
-    border-right: 80px solid transparent;
-  }
-}
-@media screen and (max-width: 460px) {
-  .entry .up {
-    width: 400px;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-  }
-}
-@media screen and (max-width: 340px) {
-  .entry .up {
-    width: 400px;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-  }
-}
-@keyframes upAnimation {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 0%;
-  }
-}
-
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.home .container {
-  background-image: url(../assets/images/545a194f87e16829c052c12a3ffc4f3a.jpeg);
-  background-color: rgba(0, 0, 0, 0.5);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-size: cover;
-  position: relative;
+}
+.entry .header {
+  height: 7%;
   width: 100%;
-  height: 100vh;
+}
+.entry .header .container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 100px;
 }
-@media (max-width: 768px) {
-  .home .container {
-    gap: 50px;
-  }
-}
-@media (max-width: 400px) {
-  .home .container {
-    gap: 30px;
-  }
-}
-.home .container .img {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.home .container .img img {
-  box-shadow: 0px 0px 10px 0px rgba(129, 127, 127, 0.75);
-  height: 400px;
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 768px) {
-  .home .container .img img {
-    height: 300px;
-  }
-}
-@media (max-width: 400px) {
-  .home .container .img img {
-    height: 200px;
-  }
-}
-.home .container ul {
+.entry .header .container .navlist {
+  padding-top: 20px;
+  color: var(--white);
+  font-family: var(--MonoFont);
+  text-align: center;
+  gap: 50px;
+  font-size: 20px;
+  font-weight: bold;
   list-style: none;
-  gap: 15px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.home .container ul li {
-  font-size: 30px;
   cursor: pointer;
-  color: rgb(86, 6, 6);
 }
-@media (max-width: 768px) {
-  .home .container ul li {
-    font-size: 25px;
+@media (max-width: 720px) {
+  .entry .header .container .navlist {
+    display: none;
   }
 }
-@media (max-width: 400px) {
-  .home .container ul li {
+@media (max-width: 768px) {
+  .entry .header .container .navlist {
     font-size: 15px;
   }
 }
-.home .container ul li:hover {
-  color: var(--red);
+.entry .header .icon {
+  margin-left: 20px;
+  margin-top: 20px;
+  display: none;
+  font-size: 30px;
+  color: var(--white);
+  cursor: pointer;
 }
-.home .container ul li:hover .iconArrow {
-  transform: translateX(10px);
+@media (max-width: 720px) {
+  .entry .header .icon {
+    display: block;
+  }
 }
-.home .container ul li .iconArrow {
-  display: inline-block;
-  transition: transform 0.3s ease;
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name .container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.name .container .icon {
+  position: absolute;
+  bottom: 100px;
+  font-size: 40px;
+  color: var(--white);
+  cursor: pointer;
+}
+.name .container h1 {
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 80px;
+  font-family: var(--poppins);
+}
+@media (max-width: 840px) {
+  .name .container h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 550px) {
+  .name .container h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 320px) {
+  .name .container h1 {
+    font-size: 20px;
+  }
+}
+.name .container h3 {
+  font-family: var(--MonoFont);
+  font-size: 30px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+@media (max-width: 840px) {
+  .name .container h3 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 550px) {
+  .name .container h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 320px) {
+  .name .container h3 {
+    font-size: 10px;
+  }
 }
 
 :root {
   --red: rgb(47, 1, 1);
   --black: black;
+  --white: white;
+  --gray: rgb(125, 119, 119);
+  --backColor: linear-gradient(to bottom, rgb(90, 89, 89), black);
+  --MonoFont: "Roboto Mono", monospace;
+  --poppins: "Poppins", sans-serif;
 }/*# sourceMappingURL=main.css.map */

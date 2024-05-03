@@ -1,4 +1,9 @@
-:root{
-    --red: rgb(47, 1, 1);
-    --black: black;
+:root {
+  --red: rgb(47, 1, 1);
+  --black: black;
+  --white: white;
+  --gray: rgb(125, 119, 119);
+  --backColor: linear-gradient(to bottom, rgb(90, 89, 89), black);
+  --MonoFont: "Roboto Mono", monospace;
+  --poppins: "Poppins", sans-serif;
 }
