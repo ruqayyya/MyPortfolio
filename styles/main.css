@@ -44,12 +44,73 @@
     font-size: 15px;
   }
 }
+.entry .header .BlockNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--white);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+.entry .header .BlockNav .active {
+  width: 500px;
+  left: 0;
+  transition: left 1s ease;
+}
+@media (max-width: 768px) {
+  .entry .header .BlockNav .active {
+    width: 300px;
+  }
+}
+@media (max-width: 420px) {
+  .entry .header .BlockNav .active {
+    width: 250px;
+  }
+}
+.entry .header .BlockNav .navbar .iconClosed {
+  color: var(--black);
+  font-size: 30px;
+  margin-bottom: 50px;
+  margin-left: 10px;
+}
+.entry .header .BlockNav .navbar .iconClosed i {
+  cursor: pointer;
+}
+.entry .header .BlockNav .navbar .iconClosed i:hover {
+  color: gray;
+}
+.entry .header .BlockNav .navbar .title p {
+  margin-top: 20px;
+  color: var(--black);
+}
+.entry .header .BlockNav .navbar .navlist {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--black);
+  font-family: var(--MonoFont);
+  gap: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  list-style: none;
+}
+.entry .header .BlockNav .navbar .navlist li {
+  cursor: pointer;
+}
+.entry .header .BlockNav .navbar .navlist li:hover {
+  color: gray;
+}
 .entry .header .icon {
   margin-left: 20px;
   margin-top: 20px;
   display: none;
   font-size: 30px;
   color: var(--white);
+}
+.entry .header .icon i {
   cursor: pointer;
 }
 @media (max-width: 720px) {
