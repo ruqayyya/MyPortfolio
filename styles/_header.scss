@@ -30,7 +30,7 @@
         list-style: none;
         display: flex;
         cursor: pointer;
-
+        
         @media (max-width: 720px) {
           display: none;
         }
@@ -39,36 +39,75 @@
         }
       }
     }
-    // .BlockNav {
-    //   display: none;
-    //   flex-direction: column;
-    //   width: 300px;
-    //   height: 100vh;
-    //   background-color: black;
-    //   @media (max-width: 720px) {
-    //     display: block;
-    //   }
-
-    //   .navbar{
-    //     .navlist {
-    //       color: var(--white);
-    //       font-family: var(--MonoFont);
-    //       text-align: center;
-    //       gap: 50px;
-    //       font-size: 20px;
-    //       font-weight: bold;
-    //       list-style: none;
-    //       cursor: pointer;
-    //     }
-    //   }
-    // }
+    .BlockNav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      overflow: hidden; 
+      background-color:var(--white);
+      transition: left 0.3s ease; 
+      z-index: 1000;
+      .active {
+        width: 500px; 
+        left: 0;
+        transition: left 1s ease;
+        @media (max-width: 768px){
+          width: 300px;
+        }
+        @media (max-width: 420px){
+          width: 250px;
+        }
+      }
+      .navbar{
+        .iconClosed{
+          color: var(--black);
+          font-size: 30px;
+          margin-bottom: 50px;
+          margin-left: 10px;
+          i{
+            cursor: pointer;
+            &:hover{
+              color:gray;
+            }
+          }
+        }
+        .title{
+          p{
+            margin-top: 20px;
+            color: var(--black);
+          }
+        }
+        .navlist {
+          margin-left: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          color: var(--black);
+          font-family: var(--MonoFont);
+          gap: 30px;
+          font-size: 20px;
+          font-weight: bold;
+          list-style: none;
+          li{
+            cursor: pointer;
+            
+            &:hover{
+              color:gray;
+            }
+          }
+        }
+      }
+    }
     .icon {
       margin-left: 20px;
       margin-top: 20px;
       display: none;
       font-size: 30px;
       color: var(--white);
-      cursor: pointer;
+      i{
+        cursor: pointer;
+      }
       @media (max-width: 720px) {
         display: block;
       }
