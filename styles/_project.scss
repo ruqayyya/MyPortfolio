@@ -1,0 +1,89 @@
+.project {
+  background-color: var(--commonColor);
+
+
+  .container {
+    .title {
+      text-align: center;
+      font-size: 80px;
+      padding-bottom: 50px;
+      color: var(--white);
+      font-family: var(--MonoFont);
+
+      @media(max-width: 786px){
+        font-size: 60px;
+        padding-bottom: 45px;
+      }
+      @media(max-width: 460px){
+        font-size: 40px;
+        padding-bottom: 30px;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .card {
+        position: relative;
+        overflow: hidden;
+        width: calc(33.33% - 20px);
+        margin-bottom: 15px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        @media(max-width: 786px){
+          width: calc(33.33% - 10px);
+        }
+        @media(max-width: 462px){
+          width: calc(50% - 10px);
+        }
+        @media(max-width: 360px){
+          width: calc(100% );
+          margin: 0 20px;
+        }
+
+
+        .image {
+          width: 100%;
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+          }
+
+          &:hover img {
+            transform: scale(1.1);
+          }
+        }
+
+        .infoCard {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+          padding: 10px;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          span {
+            margin-right: 5px;
+            border: 1px solid #fff;
+            padding: 5px;
+          }
+        }
+
+        &:hover .infoCard {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

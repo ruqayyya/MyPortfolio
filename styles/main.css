@@ -124,24 +124,8 @@
   }
 }
 
-:root {
-  --red: rgb(47, 1, 1);
-  --black: black;
-  --white: white;
-  --gray: rgb(125, 119, 119);
-  --backColor: linear-gradient(to top, rgb(90, 89, 89), rgb(7, 6, 20) );
-  --toTop: linear-gradient(to top, rgb(90, 89, 89), rgb(11, 13, 27));
-  --MonoFont: "Roboto Mono", monospace;
-  --poppins: "Poppins", sans-serif;
-}
-
-main {
-  width: 100%;
-  height: 100%;
-}
-
 .about {
-  background-image: var(--backColor);
+  background-color: var(--commonColor);
   display: flex;
   justify-content: center;
   justify-content: center;
@@ -341,4 +325,110 @@ main {
     padding: 20px;
     font-size: 7px;
   }
+}
+
+.project {
+  background-color: var(--commonColor);
+}
+.project .container .title {
+  text-align: center;
+  font-size: 80px;
+  padding-bottom: 50px;
+  color: var(--white);
+  font-family: var(--MonoFont);
+}
+@media (max-width: 786px) {
+  .project .container .title {
+    font-size: 60px;
+    padding-bottom: 45px;
+  }
+}
+@media (max-width: 460px) {
+  .project .container .title {
+    font-size: 40px;
+    padding-bottom: 30px;
+  }
+}
+.project .container .info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.project .container .info .card {
+  position: relative;
+  overflow: hidden;
+  width: calc(33.33% - 20px);
+  margin-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+@media (max-width: 786px) {
+  .project .container .info .card {
+    width: calc(33.33% - 10px);
+  }
+}
+@media (max-width: 462px) {
+  .project .container .info .card {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 360px) {
+  .project .container .info .card {
+    width: 100%;
+    margin: 0 20px;
+  }
+}
+.project .container .info .card .image {
+  width: 100%;
+}
+.project .container .info .card .image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+.project .container .info .card .image:hover img {
+  transform: scale(1.1);
+}
+.project .container .info .card .infoCard {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.project .container .info .card .infoCard span {
+  margin-right: 5px;
+  border: 1px solid #fff;
+  padding: 5px;
+}
+.project .container .info .card:hover .infoCard {
+  opacity: 1;
+}
+
+:root {
+  --red: rgb(47, 1, 1);
+  --black: black;
+  --white: white;
+  --gray: rgb(125, 119, 119);
+  --backColor: linear-gradient(to top, rgb(90, 89, 89), rgb(7, 6, 20) );
+  --toTop: linear-gradient(to top, rgb(90, 89, 89), rgb(11, 13, 27));
+  --commonColor: rgb(26, 25, 29);
+  --MonoFont: "Roboto Mono", monospace;
+  --poppins: "Poppins", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */
